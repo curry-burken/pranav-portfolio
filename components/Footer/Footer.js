@@ -9,18 +9,18 @@ import { theme } from "tailwind.config";
 import { MENULINKS } from "../../constants";
 
 const Footer = () => {
-  const [playbackRate, setPlaybackRate] = useState(0.75);
+  // const [playbackRate, setPlaybackRate] = useState(0.75);
 
-  const heartClickSound = new Howl({
-    src: ["/sounds/glug-a.mp3"],
-    rate: playbackRate,
-    volume: 0.5,
-  });
+  // const heartClickSound = new Howl({
+  //   src: ["/sounds/glug-a.mp3"],
+  //   rate: playbackRate,
+  //   volume: 0.5,
+  // });
 
-  const handleClick = () => {
-    setPlaybackRate((rate) => rate + 0.1);
-    heartClickSound.play();
-  };
+  // const handleClick = () => {
+  //   setPlaybackRate((rate) => rate + 0.1);
+  //   heartClickSound.play();
+  // };
 
   return (
     <footer

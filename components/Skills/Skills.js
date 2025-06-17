@@ -54,7 +54,7 @@ const Skills = () => {
               My Skills
             </h1>
             <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">
-              Things I've worked with.{" "}
+              Things I&apos;ve worked with.{" "}
             </h2>
           </div>
           <div className="mt-10">

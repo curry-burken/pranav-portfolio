@@ -11,6 +11,7 @@ import About1 from "@/components/About/About1";
 import Skills from "@/components/Skills/Skills";
 import About2 from "@/components/About/About2";
 import Projects from "@/components/Projects/Projects";
+import Footer from "@/components/Footer/Footer";
 import { displayFancyLogs } from "utils/log";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -68,6 +69,7 @@ export default function Home() {
             <About2 clientHeight={clientHeight} />
             <Projects isDesktop={isDesktop} clientHeight={clientHeight} />
           </main>
+          <Footer/>
         </>
       )}
     </>

@@ -20,6 +20,9 @@ const toastOptions = {
   },
 };
 
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
 const empty = () =>
   toast.error("Please fill the required fields", {
     id: "error",
@@ -63,7 +66,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
     const { name, email, message } = {
       name: formData.name,
@@ -71,26 +74,35 @@ const Contact = () => {
       message: formData.message,
     };
 
-    if (name === "" || email === "" || message === "") {
-      empty();
-      return setMailerResponse("empty");
-    }
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+    empty();
+    setMailerResponse("empty");
+    return;
+  }
 
-    setIsSending(true);
-    mail({ name, email, message })
-      .then((res) => {
-        if (res.status === 200) {
-          setMailerResponse("success");
-          emptyForm();
-        } else {
-          setMailerResponse("error");
-        }
-      })
-      .catch((err) => {
+  if (!isValidEmail(email)) {
+    toast.error("Email format is not valid", {
+      id: "invalid-email",
+    });
+    setMailerResponse("invalid");
+    return;
+  }
+
+  setIsSending(true);
+  mail({ name, email, message })
+    .then((res) => {
+      if (res.status === 200) {
+        setMailerResponse("success");
+        emptyForm();
+      } else {
         setMailerResponse("error");
-        console.error(err);
-      });
-  };
+      }
+    })
+    .catch((err) => {
+      setMailerResponse("error");
+      console.error(err);
+    });
+};
 
   useEffect(() => {
     setTimeout(() => {
@@ -346,20 +358,23 @@ const Contact = () => {
             onClick={handleSubmit}
           >
             <span>Send -&gt;</span>
-            <span className={styles.success}>
+            {mailerResponse !== "not initiated" &&
+            mailerResponse === "success" && (<>
+              <span className={styles.success}>
               <svg viewBox="0 0 16 16">
                 <polyline points="3.75 9 7 12 13 5"></polyline>
               </svg>
               Sent
-            </span>
-            <svg className={styles.trails} viewBox="0 0 33 64">
-              <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
-              <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
-            </svg>
-            <div className={styles.plane}>
-              <div className={styles.left} />
-              <div className={styles.right} />
-            </div>
+              </span>
+              <svg className={styles.trails} viewBox="0 0 33 64">
+                <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+                <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
+              </svg>
+              <div className={styles.plane}>
+                <div className={styles.left} />
+                <div className={styles.right} />
+              </div>
+              </>)}
           </button>
         </div>
       </div>

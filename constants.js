@@ -141,3 +141,70 @@ export const PROJECTS = [
     tech: [],
   },
 ];
+
+export const WORK_CONTENTS = {
+  DATTAM: [
+    {
+      title: "Access Mobile React Native App",
+      description:
+        "Built multiple modular page and screen components for a React Native application. Integrated APIs with the frontend by collaborating closely with the backend team.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>Junior Frontend Developer</div>
+          <div>April 2025 - May 2025</div>
+        </div>
+      ),
+    },
+    {
+      title: "Resume Parser MVP",
+      description:
+        "Created a resume parser MVP from scratch using Next.js and Material UI. The application handles multiple resume uploads and parses them with the help of Gemini LLM.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>Junior Frontend Developer</div>
+          <div>April 2025 - May 2025</div>
+        </div>
+      ),
+    },
+  ],
+  DELOITTE: [
+    {
+      title: "",
+      description:
+        "Acquired expertise in front-end development using HTML5, CSS3, Bootstrap, JavaScript, and React.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>Analyst Trainee (Frontend)</div>
+          <div>February 2025 - April 2025</div>
+        </div>
+      ),
+    },
+  ],
+  SYSTECH: [
+    {
+      title: "",
+      description:
+        "Had the opportunity to learn about data handling using SQL and Python, gaining valuable insights into data analysis.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>Data Engineer (Intern)</div>
+          <div>April 2024 - June 2024</div>
+        </div>
+      ),
+    },
+  ],
+  DUCONT: [
+    {
+      title: "",
+      description:
+        "Gained hands-on experience in building and managing small-scale APIs. Performed as an Intern Leader, effectively coordinating tasks among team members.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>API Developer (Student Intern)</div>
+          <div>March 2023 - March 2023</div>
+        </div>
+      ),
+    },
+  ],
+};
+

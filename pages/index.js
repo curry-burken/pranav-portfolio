@@ -11,6 +11,7 @@ import About1 from "@/components/About/About1";
 import Skills from "@/components/Skills/Skills";
 import About2 from "@/components/About/About2";
 import Projects from "@/components/Projects/Projects";
+import Work from "@/components/Work/Work";
 import Collaboration from "@/components/Collaboration/Collaboration";
 import Footer from "@/components/Footer/Footer";
 import { displayFancyLogs } from "utils/log";
@@ -69,6 +70,7 @@ export default function Home() {
             <Skills />
             <About2 clientHeight={clientHeight} />
             <Projects isDesktop={isDesktop} clientHeight={clientHeight} />
+            <Work isDesktop={isDesktop} />
             <Collaboration clientHeight={clientHeight} />
           </main>
           <Footer/>

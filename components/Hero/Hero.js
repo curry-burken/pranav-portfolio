@@ -92,7 +92,7 @@ const Hero = () => {
         </div>
         <div className="staggered-reveal pt-4">
           <Button
-            href=""
+            href="https://drive.google.com/file/d/1c27EVAx4WENiZgD4YVgbElMssPDSl1sf/view?usp=sharing"
             classes="link"
             type="primary"
             target="_blank"

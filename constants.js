@@ -143,6 +143,19 @@ export const PROJECTS = [
 ];
 
 export const WORK_CONTENTS = {
+  NOVAC: [
+    {
+      title: "",
+      description:
+        "Full Stack Developer building scalable web applications.",
+      content: (
+        <div className="h-full w-full flex flex-col items-center justify-center text-white px-4">
+          <div>Software Engineer Trainee</div>
+          <div>July 2025 - Present</div>
+        </div>
+      ),
+    },
+  ],
   DATTAM: [
     {
       title: "Access Mobile React Native App",

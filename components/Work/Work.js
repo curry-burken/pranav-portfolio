@@ -11,6 +11,16 @@ const Work = ({ isDesktop }) => {
   const tabItems = useMemo(
     () => [
       {
+        title: "Novac Technology Solutions",
+        value: "Novac Technology Solutions",
+        content: (
+          <StickyScroll
+            isDesktop={isDesktop}
+            contentItems={WORK_CONTENTS.NOVAC}
+          />
+        ),
+      },
+      {
         title: "Dattam Labs",
         value: "Dattam Labs",
         content: (

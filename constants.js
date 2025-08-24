@@ -54,7 +54,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/pranav-niranjan-j-b12a87236/",
+    url: "https://www.linkedin.com/in/pranav-niranjan-j/",
   },
   {
     name: "github",

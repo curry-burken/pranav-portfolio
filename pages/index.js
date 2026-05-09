@@ -9,6 +9,7 @@ import Cursor from "@/components/Cursor/Cursor";
 import Hero from "@/components/Hero/Hero";
 import About1 from "@/components/About/About1";
 import Skills from "@/components/Skills/Skills";
+import Certifications from "@/components/Certifications/Certifications";
 import About2 from "@/components/About/About2";
 import Projects from "@/components/Projects/Projects";
 import Work from "@/components/Work/Work";
@@ -69,6 +70,7 @@ export default function Home() {
             <Hero />
             <About1 clientHeight={clientHeight} />
             <Skills />
+            <Certifications />
             <About2 clientHeight={clientHeight} />
             <Projects isDesktop={isDesktop} clientHeight={clientHeight} />
             <Work isDesktop={isDesktop} />

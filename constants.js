@@ -30,6 +30,10 @@ export const MENULINKS = [
     ref: "skills",
   },
   {
+    name: "Certifications",
+    ref: "certifications",
+  },
+  {
     name: "Projects",
     ref: "projects",
   },
@@ -92,6 +96,16 @@ export const SKILLS = {
     "netlify",
     "docker",
   ],
+};
+
+export const CERTIFICATIONS = {
+  aws:[
+    "AWS-Cloud-Practitioner",
+  ],
+  azure:[
+    "AZ-900"
+  ],
+  google:[],
 };
 
 export const PROJECTS = [
